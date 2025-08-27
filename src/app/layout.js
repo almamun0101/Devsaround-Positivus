@@ -1,12 +1,10 @@
-
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 
 const spaceGrotesk = Space_Grotesk({
-  weight: ["300","400","500","600","700"], // specify the weights you need
+  weight: ["300", "400", "500", "600", "700"], // specify the weights you need
   subsets: ["latin"],
 });
-
 
 export const metadata = {
   title: "Create Next App",

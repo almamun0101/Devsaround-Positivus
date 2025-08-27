@@ -12,16 +12,16 @@ const logos = [
 
 const Header = () => {
   return (
-    <div className="container lg:pt-[70px] px-5">
+    <div className="container lg:pt-[70px] px-5 md:px-0">
       <header className="flex flex-col md:flex-row gap-10 justify-between items-center ">
         <div className="w-full md:w-[531px] ">
-          <h1 className="text-6xl font-medium pb-8 leading-[100%]">
+          <h1 className="!text-6xl font-medium pb-8 leading-[120%]">
             Navigation the digital landscape for success
           </h1>
-          <p className="leading-[28px] pb-[35px]">
+          <p className="leading-[28px] pb-[35px] w-100 ">
             Our digital marketing agency helps businesses grow and successed
             online through a range of services including SEO , PPC , social
-            media marketing , and coneter creation.
+            media marketing , and center creation.
           </p>
           <button className="bg-black text-white w-66 h-17 rounded-xl">
             Book a consultation{" "}
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
       </header>
 
-      <div className="pt-17">
+      <div className="py-17">
         <ul className="grid grid-cols-3 md:grid-cols-6 gap-5 justify-between items-center">
           {logos.map((logo, index) => (
             <li key={index}>
