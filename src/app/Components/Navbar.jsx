@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="container text-black py-5">
       <nav className="flex  justify-between items-center py-2 px-5">
         <div className="">
-          <img src="" alt="" />
+          {/* <img src="" alt="" /> */}
           <h2 className="font-bold text-3xl">Positivus</h2>
         </div>
 
