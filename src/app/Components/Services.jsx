@@ -16,7 +16,7 @@ const ServicesDetails = [
     tittleBg: "bg-gray",
     bg: "bg-pri",
     learn: "text-black",
-    arrow: "bg-pri",
+    arrow: "bg-pri text-black",
     img: "./service2.png",
   },
   {
@@ -24,7 +24,7 @@ const ServicesDetails = [
     tittleBg: "bg-gray",
     bg: "bg-black",
     learn: "text-white",
-    arrow: "bg-gray",
+    arrow: "bg-black text-gray",
     img: "./service3.png",
   },
   {
@@ -48,16 +48,16 @@ const ServicesDetails = [
     tittleBg: "bg-gray",
     bg: "bg-black",
     learn: "text-white",
-    arrow: "bg-gray",
+    arrow: "bg-black text-gray",
     img: "./service6.png",
   },
 ];
 
 const Services = () => {
   return (
-    <div className="container pt-17">
+    <div className="container py-10 md:py-17 px-5 lg:px-0">
       {/* Heading */}
-      <div className="flex gap-12 justify-start items-center py-10">
+      <div className="flex flex-wrap gap-12 justify-start items-center py-10">
         <h2 className="bg-pri rounded-lg p-2  text-3xl font-medium">
           Services
         </h2>
@@ -70,30 +70,33 @@ const Services = () => {
       {/* Services Grid */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
-
-        {
-            ServicesDetails.map((service,index)=>(
-
-        <div className="border p-12 rounded-4xl flex items-center justify-between">
-          {/* Left side content */}
-          <div className="">
-            <h3 className="w-45 pb-23">{service.tittle}</h3>
-            {/* learn More */}
-            <div className="flex gap-4 items-center">
-              <BsArrowUpRightCircleFill
-                size={30}
-                className="bg-pri rounded-full"
-              />
-              <Link href="" className="text-lg">
-                Learn More
+        {ServicesDetails.map((service, index) => (
+          <div
+            key={index}
+            className={`border p-12 rounded-4xl flex items-center justify-between gap-4 shadow-[0_10px_0_0_rgba(0,0,0,1)]  ${service.bg}`}
+          >
+            {/* Left side content */}
+            <div className="w-55">
+              <h3 className={` px-2 !font-bold rounded-sm inline leading-8 ${service.tittleBg}`}>
+                {service.tittle}
+              </h3>
+              {/* learn More */}
+              <Link href="" className="pt-23 flex gap-4 items-center">
+                <BsArrowUpRightCircleFill
+                  size={35}
+                  className={`rounded-full ${service.arrow}`}
+                />
+                <p  className={`hidden md:block text-lg ${service.learn}`}>
+                  Learn More
+                </p>
               </Link>
             </div>
-          </div>
 
-          <div className="">{/* <img src="" alt="" /> */}</div>
-        </div>
-            ))
-        }
+            <div className="">
+              <img src={service.img} alt={service.tittle} />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
