@@ -5,7 +5,7 @@ import Services from "../Components/Services";
 
 const page = () => {
   return (
-    <div>
+    <div className="px-2 lg:px-0">
       <Navbar />
       <Header/>
       <Services/>

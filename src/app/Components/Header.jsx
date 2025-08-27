@@ -1,13 +1,14 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 const logos = [
-  { tittle: "amazon", src: "./logo/amazon.png" },
-  { tittle: "dribbble", src: "./logo/dribbble.png" },
-  { tittle: "hubspot", src: "./logo/hubspot.png" },
-  { tittle: "notion", src: "./logo/notion.png" },
-  { tittle: "netflix", src: "./logo/netflix.png" },
-  { tittle: "zoom", src: "./logo/zoom.png" },
+  { title: "amazon", src: "/logo/amazon.png" },
+  { title: "dribbble", src: "/logo/dribbble.png" },
+  { title: "hubspot", src: "/logo/hubspot.png" },
+  { title: "notion", src: "/logo/notion.png" },
+  { title: "netflix", src: "/logo/netflix.png" },
+  { title: "zoom", src: "/logo/zoom.png" },
 ];
 
 const Header = () => {
@@ -23,20 +24,32 @@ const Header = () => {
             online through a range of services including SEO , PPC , social
             media marketing , and center creation.
           </p>
-          <button className="bg-black text-white w-66 h-17 rounded-xl">
+          <button className="bg-black text-white w-66 h-16 rounded-xl">
             Book a consultation{" "}
           </button>
         </div>
-        <div className="">
-          <img src="./Images/banner.png" alt="banner" className="w-full" />
-        </div>
+       <div className="w-full h-[400px] relative">
+      <Image
+        src="/Images/banner.png"
+        alt="banner"
+        fill
+        className="object-contain rounded-xl"
+        priority
+      />
+    </div>
       </header>
 
-      <div className="py-17">
+      <div className="py-16">
         <ul className="grid grid-cols-3 md:grid-cols-6 gap-5 justify-between items-center">
           {logos.map((logo, index) => (
             <li key={index}>
-              <img src={logo.src} alt={logo.tittle} className="w-40" />
+              <Image
+                src={logo.src}
+                alt={logo.title}
+                width={100}
+                height={40}
+                className="mx-auto h-10 w-auto"
+              />
             </li>
           ))}
         </ul>
