@@ -59,8 +59,8 @@ const Team = () => {
     <Heading title={"Team"} content={"Meet the skilled and experienced team behind our successful digital marketing strategies"}/>
 
       <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {teams.map((member) => (
-          <div className="border p-5 lg:p-5 rounded-3xl shadow-[0_5px_0_0_rgba(0,0,0,1)]">
+        {teams.map((member,index) => (
+          <div key={index} className="border p-5 lg:p-5 rounded-3xl shadow-[0_5px_0_0_rgba(0,0,0,1)]">
             <div className="flex  border-b pb-10 justify-between">
               <div className=""></div>
               <div className="pt-10">

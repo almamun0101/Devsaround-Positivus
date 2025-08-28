@@ -5,6 +5,9 @@ import Services from "../Components/Services";
 import Studies from "../Components/Studies";
 import Process from "../Components/Process";
 import Team from "../Components/Team";
+import Testimonials from "../Components/Testimonials";
+import Contact from "../Components/Contact";
+
 
 const page = () => {
   return (
@@ -15,6 +18,8 @@ const page = () => {
       <Studies/>
       <Process/>
       <Team/>
+      <Testimonials/>
+      <Contact/>
 
     </div>
   );
