@@ -1,13 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from "./Dark";
 
 const Navbar = () => {
   return (
     <div className="container text-black py-5">
       <nav className="flex  justify-between items-center py-2 px-5">
         <div className="">
-          {/* <img src="" alt="" /> */}
-          <h2 className="font-bold text-3xl">Positivus</h2>
+         <Image src="/logo/Logo.png" width={200} height={100}/>
+        
         </div>
 
         <ul className="hidden md:flex gap-10 ">
@@ -20,6 +23,7 @@ const Navbar = () => {
         <button className="hidden md:block border rounded-2xl w-[231px] h-[68px]">
           Request a quote
         </button>
+       <ModeToggle/>
       </nav>
     </div>
   );

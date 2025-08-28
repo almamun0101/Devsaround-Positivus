@@ -3,12 +3,12 @@ import Image from "next/image";
 import React from "react";
 
 const logos = [
-  { title: "amazon", src: "/logo/amazon.png" },
-  { title: "dribbble", src: "/logo/dribbble.png" },
-  { title: "hubspot", src: "/logo/hubspot.png" },
-  { title: "notion", src: "/logo/notion.png" },
-  { title: "netflix", src: "/logo/netflix.png" },
-  { title: "zoom", src: "/logo/zoom.png" },
+  { title: "amazon", src: "/logo/Company logo (0).png" },
+  { title: "dribbble", src: "/logo/Company logo (1).png" },
+  { title: "hubspot", src: "/logo/Company logo (2).png" },
+  { title: "notion", src: "/logo/Company logo (3).png" },
+  { title: "netflix", src: "/logo/Company logo (4).png" },
+  { title: "zoom", src: "/logo/Company logo (5).png" },
 ];
 
 const Header = () => {
@@ -48,7 +48,11 @@ const Header = () => {
                 alt={logo.title}
                 width={100}
                 height={40}
-                className="mx-auto h-10 w-auto"
+                className="mx-auto h-10 w-auto text-gray"
+                style={{
+    filter: 'grayscale(100%)',
+    transition: 'filter 0.3s ease'
+  }}
               />
             </li>
           ))}

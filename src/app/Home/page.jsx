@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
-import Header from "../Components/Header";
-import Services from "../Components/Services";
-import Studies from "../Components/Studies";
-import Process from "../Components/Process";
-import Team from "../Components/Team";
-import Testimonials from "../Components/Testimonials";
-import Contact from "../Components/Contact";
+import Navbar from "../Component/Navbar";
+import Header from "../Component/Header";
+import Services from "../Component/Services";
+import Studies from "../Component/Studies";
+import Process from "../Component/Process";
+import Team from "../Component/Team";
+import Testimonials from "../Component/Testimonials";
+import Contact from "../Component/Contact";
 
 
 const page = () => {
