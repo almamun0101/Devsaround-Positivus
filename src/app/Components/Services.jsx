@@ -73,12 +73,12 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className={`border p-5 md:p-12 rounded-4xl flex  items-center justify-between gap-4 shadow-[0_10px_0_0_rgba(0,0,0,1)]  ${service.bg}`}
+            className={`border p-5 md:p-12 rounded-4xl flex  items-center justify-between lg:gap-4 shadow-[0_10px_0_0_rgba(0,0,0,1)] overflow-hidden ${service.bg}`}
           >
             {/* Left side content */}
             <div className="w-full md:w-55">
               <h3
-                className={` px-5 py-2 !font-bold rounded-sm inline leading-10 ${service.titleBg}`}
+                className={` px-2 !font-bold rounded-sm inline leading-10 ${service.titleBg}`}
               >
                 {service.title}
               </h3>
@@ -96,7 +96,7 @@ const Services = () => {
 
 
            {/* Right side */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 ">
               <Image
                 src={service.img}
                 alt={service.title}
