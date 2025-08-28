@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
+import Heading from "./Heading";
 
 const services = [
   {
@@ -58,15 +59,7 @@ const Services = () => {
   return (
     <div className="container py-10 md:py-17 px-5 lg:px-0">
       {/* Heading */}
-      <div className="flex flex-wrap gap-12 justify-start items-center py-10">
-        <h2 className="bg-pri rounded-lg p-2  text-3xl font-medium">
-          Services
-        </h2>
-        <p className="lg:w-[580px]">
-          At our digital marketing agency , we offer a range of Services to help
-          businesses grow and succeed online . These services include:
-        </p>
-      </div>
+    <Heading title={" Services"} content={"At our digital marketing agency , we offer a range of Services to help businesses grow and succeed online . These services include:"}/>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10 pb-15 md:pb-25">

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
+import Heading from "./Heading";
 
 const teams = [
   {
@@ -55,19 +56,11 @@ const Team = () => {
   return (
     <div className="container py-20">
       {/* Heading */}
-      <div className="flex flex-wrap gap-12 justify-center lg:justify-start items-center py-10 text-center lg:text-left">
-        <h2 className="bg-pri text-center lg:text-left- rounded-lg p-3  text-3xl font-medium">
-          Team
-        </h2>
-        <p className="w-full lg:w-[473px]">
-          Meet the skilled and experienced team behind our successful digital
-          marketing strategies
-        </p>
-      </div>
+    <Heading title={"Team"} content={"Meet the skilled and experienced team behind our successful digital marketing strategies"}/>
 
       <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10">
         {teams.map((member) => (
-          <div className="border p-5 lg:p-5 rounded-3xl shadow-[0_10px_0_0_rgba(0,0,0,1)]">
+          <div className="border p-5 lg:p-5 rounded-3xl shadow-[0_5px_0_0_rgba(0,0,0,1)]">
             <div className="flex  border-b pb-10 justify-between">
               <div className=""></div>
               <div className="pt-10">
@@ -82,6 +75,12 @@ const Team = () => {
             <p className="py-10">{member.description}</p>
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-end py-15">
+      <button className="bg-black text-xl text-white w-66 h-16 rounded-xl">
+            See All Team{" "}
+          </button>
       </div>
     </div>
   );

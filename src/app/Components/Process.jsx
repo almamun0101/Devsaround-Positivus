@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import Heading from "./Heading";
 const processes = [
   {
     id: "01",
@@ -41,32 +42,25 @@ const Process = () => {
   return (
     <div className="container py-10">
       {/* Heading */}
-      <div className="flex flex-wrap gap-12 justify-center lg:justify-start items-center py-10 text-center lg:text-left">
-        <h2 className="bg-pri text-center lg:text-left- rounded-lg p-3  text-3xl font-medium">
-          Our Working Process
-        </h2>
-        <p className="w-full lg:w-[292px] text-lg">
-          Step-by-Step Guide to Achieving Your Business Goals
-        </p>
-      </div>
+      <Heading title={"Our Working Process"} content={"Step-by-Step Guide to Achieving Your Business Goals"}/>
 
       {/* Processes */}
-      <div className=" flex flex-col justify-start  gap-10 py-10">
+      <div className=" flex flex-col justify-start gap-5 lg:gap-10 py-10">
         {processes.map((process) => (
           <div
             key={process.id}
-            className={` ${openId === process.id ? "bg-pri" : "bg-gray"} w-full px-10 py-10 border rounded-4xl mx-auto shadow-[0_10px_0_0_rgba(0,0,0,1)]`}
+            className={` ${openId === process.id ? "bg-pri" : "bg-gray"} w-full px-10 py-5 lg:py-10 border rounded-4xl mx-auto shadow-[0_6px_0_0_rgba(0,0,0,1)]`}
           >
             <div
               onClick={() => handleOpen(process.id)}
-              className="flex justify-between cursor-pointer"
+              className="flex items-center justify-between cursor-pointer gap-5"
             >
               <div className="flex items-center gap-6 py-5">
                 <h2 className="font-bold text-4xl ">
                   {}
                   {process.id}
                 </h2>
-                <h3 className="text-lg font-medium">{process.title}</h3>
+                <h3 className="!text-lg font-medium">{process.title}</h3>
               </div>
               {openId === process.id ? (
                 <Minus className="w-10 h-10 rounded-full border-2 p-2" />
@@ -74,9 +68,11 @@ const Process = () => {
                 <Plus className="w-10 h-10 rounded-full border-2 p-2" />
               )}
             </div>
+
+
             {/* content */}
             <div
-              className={`transition-all duration-500 overflow-hidden ${
+              className={` transition-all duration-500 overflow-hidden ${
                 openId === process.id ? "max-h-40 mt-3" : "max-h-0"
               }`}
             >
