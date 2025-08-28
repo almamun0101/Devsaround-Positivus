@@ -45,7 +45,7 @@ const Process = () => {
         <h2 className="bg-pri text-center lg:text-left- rounded-lg p-3  text-3xl font-medium">
           Our Working Process
         </h2>
-        <p className="w-full lg:w-[580px]">
+        <p className="w-full lg:w-[292px] text-lg">
           Step-by-Step Guide to Achieving Your Business Goals
         </p>
       </div>

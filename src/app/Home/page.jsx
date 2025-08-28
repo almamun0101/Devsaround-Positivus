@@ -4,6 +4,7 @@ import Header from "../Components/Header";
 import Services from "../Components/Services";
 import Studies from "../Components/Studies";
 import Process from "../Components/Process";
+import Team from "../Components/Team";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <Services/>
       <Studies/>
       <Process/>
+      <Team/>
 
     </div>
   );

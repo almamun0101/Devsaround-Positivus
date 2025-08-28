@@ -27,6 +27,7 @@ const Studies = () => {
         </p>
       </div>
 
+      {/* Process Cards */}
       <div className="md:grid hidden  md:grid-cols-3 justify-between items-center rounded-4xl w-full relative bg-black text-white text-left lg:p-15 ">
         {studies.map((study, index) => (
           <div
