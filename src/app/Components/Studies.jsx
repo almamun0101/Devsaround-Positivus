@@ -15,7 +15,7 @@ const studies = [
 ];
 const Studies = () => {
   return (
-    <div className="container lg:py-30">
+    <div className="container lg:py-20">
       {/* Heading */}
       <div className="flex flex-wrap gap-12 justify-center lg:justify-start items-center py-10 text-center lg:text-left">
         <h2 className="bg-pri text-center lg:text-left- rounded-lg p-3  text-3xl font-medium">
@@ -43,9 +43,9 @@ const Studies = () => {
         ))}
       </div>
 
-      <div className="p-10 grid grid-cols-1 gap-10  ">
+      <div className="md:hidden p-10 grid grid-cols-1 gap-10  ">
         {studies.map((study, index) => (
-          <div className="bg-black text-white p-15 rounded-xl flex flex-col gap-10">
+          <div key={index} className="bg-black text-white p-15 rounded-xl flex flex-col gap-10">
             <p>{study.text}</p>
             <Link href="" className="flex  items-center gap-5 text-pri text-lg">
               Learn More <MdArrowOutward />
