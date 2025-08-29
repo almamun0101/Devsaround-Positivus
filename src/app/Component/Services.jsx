@@ -14,7 +14,7 @@ const services = [
     bg: "bg-gray dark:bg-gray-dark",
     learn: "text-black dark:text-black",
     arrow: "bg-pri dark:bg-pri-dark",
-    img: "/service1.png",
+    img: "/Images/service1.png",
   },
   {
     title: "Pay-per-click Advertising",
@@ -22,7 +22,7 @@ const services = [
     bg: "bg-pri dark:bg-pri-dark",
     learn: "text-black dark:text-white",
     arrow: "bg-pri text-black dark:bg-pri-dark dark:text-black",
-    img: "/service2.png",
+    img: "/Images/service2.png",
   },
   {
     title: "Social Media Marketing",
@@ -30,7 +30,7 @@ const services = [
     bg: "bg-black dark:bg-black-dark",
     learn: "text-white dark:text-gray-300",
     arrow: "bg-black text-gray dark:bg-black-dark dark:text-gray-300",
-    img: "/service3.png",
+    img: "/Images/service3.png",
   },
   {
     title: "Email Marketing",
@@ -38,7 +38,7 @@ const services = [
     bg: "bg-gray dark:bg-gray-dark",
     learn: "text-black dark:text-black",
     arrow: "bg-pri dark:bg-pri-dark",
-    img: "/service4.png",
+    img: "/Images/service4.png",
   },
   {
     title: "Content Creation",
@@ -46,7 +46,7 @@ const services = [
     bg: "bg-pri dark:bg-pri-dark",
     learn: "text-black dark:text-black",
     arrow: "bg-pri dark:bg-pri-dark",
-    img: "/service5.png",
+    img: "/Images/service5.png",
   },
   {
     title: "Analytics and Tracing",
@@ -54,7 +54,7 @@ const services = [
     bg: "bg-black dark:bg-black-dark",
     learn: "text-white dark:text-gray-300",
     arrow: "bg-black text-gray dark:bg-black-dark dark:text-gray-300",
-    img: "/service6.png",
+    img: "/Images/service6.png",
   },
 ];
 
