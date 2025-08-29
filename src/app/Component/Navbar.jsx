@@ -27,10 +27,13 @@ const Navbar = () => {
           <Link href="">Pricing</Link>
           <Link href="">Blog</Link>
         </ul>
+        <div className="flex items-center gap-5">
+        <ModeToggle />
+
         <button className="hidden md:block border rounded-2xl w-[231px] h-[68px] hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white transition-colors ">
           Request a quote
         </button>
-        <ModeToggle />
+        </div>
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}

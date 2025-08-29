@@ -161,7 +161,7 @@ const Services = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-black text-white dark:text-white rounded-2xl px-10 py-5 text-xl"
+            className="bg-black dark:hover:text-black hover:bg-white border-2 border-transparent hover:text-black hover:border-2 hover:border-black text-white dark:text-white rounded-2xl px-10 py-5 text-xl"
           >
             Get Your Free Proposal
           </motion.button>
