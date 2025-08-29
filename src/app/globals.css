@@ -113,7 +113,9 @@ p{
   display: block; /* ✅ important to make it visible */
 }
 
-
+.dark img {
+  filter: invert(1) grayscale(0);
+}
 /* 
 ---break--- */
 @theme inline {
