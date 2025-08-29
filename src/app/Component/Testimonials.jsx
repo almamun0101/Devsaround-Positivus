@@ -27,6 +27,18 @@ const comments = [
     position: "Founder of StartupHub",
     text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
   },
+  {
+    id: "c3",
+    name: "Michael Brown",
+    position: "Founder of StartupHub",
+    text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    id: "c3",
+    name: "Michael Brown",
+    position: "Founder of StartupHub",
+    text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
 ];
 
 const Testimonials = () => {
@@ -35,6 +47,10 @@ const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
     infinite: true,
     centerMode: true,
     centerPadding: "20%",
@@ -64,6 +80,10 @@ const Testimonials = () => {
   };
 
   const settings2 = {
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
     infinite: true,
     centerMode: true,
     centerPadding: "0%",
@@ -98,8 +118,7 @@ const Testimonials = () => {
             <div key={c.id} className="px-3">
               <div className="flex flex-col p-6 rounded-xl items-start transition-all duration-500 ease-in-out">
                 <p className="multi-lines pb-10 relative italic border-2 border-pri p-10 rounded-4xl text-sm md:text-base line-clamp-3 md:line-clamp-none">
-                  “{c.text}”
-                  <span></span>
+                  “{c.text}”<span></span>
                 </p>
                 <div className="mt-4 pl-12 text-left">
                   <p className="font-semibold pt-4 text-pri">{c.name}</p>
