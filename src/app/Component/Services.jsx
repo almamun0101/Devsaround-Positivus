@@ -12,7 +12,7 @@ const services = [
     title: "Search Engine Optimization",
     titleBg: "bg-pri dark:bg-pri-dark",
     bg: "bg-gray dark:bg-gray-dark",
-    learn: "text-black dark:text-white",
+    learn: "text-black dark:text-black",
     arrow: "bg-pri dark:bg-pri-dark",
     img: "/service1.png",
   },
@@ -21,7 +21,7 @@ const services = [
     titleBg: "bg-gray dark:bg-gray-dark",
     bg: "bg-pri dark:bg-pri-dark",
     learn: "text-black dark:text-white",
-    arrow: "bg-pri text-black dark:bg-pri-dark dark:text-white",
+    arrow: "bg-pri text-black dark:bg-pri-dark dark:text-black",
     img: "/service2.png",
   },
   {
@@ -36,7 +36,7 @@ const services = [
     title: "Email Marketing",
     titleBg: "bg-pri dark:bg-pri-dark",
     bg: "bg-gray dark:bg-gray-dark",
-    learn: "text-black dark:text-white",
+    learn: "text-black dark:text-black",
     arrow: "bg-pri dark:bg-pri-dark",
     img: "/service4.png",
   },
@@ -44,7 +44,7 @@ const services = [
     title: "Content Creation",
     titleBg: "bg-gray dark:bg-gray-dark",
     bg: "bg-pri dark:bg-pri-dark",
-    learn: "text-black dark:text-white",
+    learn: "text-black dark:text-black",
     arrow: "bg-pri dark:bg-pri-dark",
     img: "/service5.png",
   },
@@ -98,7 +98,7 @@ const Services = () => {
             {/* Left side content */}
             <div className="w-full md:w-55">
               <h3
-                className={`px-2 !font-bold rounded-sm inline leading-10 ${service.titleBg}`}
+                className={`px-2 !font-bold rounded-sm inline leading-10 ${service.titleBg} dark:text-black`}
               >
                 {service.title}
               </h3>
@@ -106,7 +106,7 @@ const Services = () => {
               {/* Learn More */}
               <Link
                 href="#"
-                className="pt-6 flex gap-4 items-center group"
+                className="pt-6 dark:text-black flex gap-4 items-center group"
                 aria-label={`Learn more about ${service.title}`}
               >
                 <motion.div
@@ -150,7 +150,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="flex flex-col md:flex-row justify-between items-center rounded-4xl w-full relative bg-gray p-10 dark:bg-gray-dark"
+        className="flex flex-col md:flex-row justify-between items-center rounded-4xl w-full relative bg-gray p-10 dark:bg-gray-dark dark:text-black"
       >
         <div>
           <h2 className="text-2xl font-bold">Let's Make Things Happen</h2>
@@ -161,7 +161,7 @@ const Services = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-black dark:bg-white text-white dark:text-black rounded-2xl px-10 py-5 text-xl"
+            className="bg-black text-white dark:text-white rounded-2xl px-10 py-5 text-xl"
           >
             Get Your Free Proposal
           </motion.button>

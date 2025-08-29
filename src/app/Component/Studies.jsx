@@ -6,6 +6,7 @@ import { MdArrowOutward } from "react-icons/md";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Heading from "./Heading";
 
 const studies = [
   {
@@ -35,15 +36,7 @@ const Studies = () => {
   return (
     <div className="container lg:py-20">
       {/* Heading */}
-      <div className="flex flex-wrap gap-12 justify-center lg:justify-start items-center py-10 text-center lg:text-left">
-        <h2 className="bg-pri rounded-lg p-3 text-3xl font-medium">
-          Case Studies
-        </h2>
-        <p className="w-full lg:w-[580px]">
-          Explore Real-life Examples of Our Proven Digital Marketing Success
-          Through Our Case Studies
-        </p>
-      </div>
+      <Heading title={"Case Studies"} content={" Explore Real-life Examples of Our Proven Digital Marketing Success Through Our Case Studies"}/>
 
       {/* Desktop Grid */}
       <div className="hidden md:grid md:grid-cols-3 justify-between items-center rounded-4xl w-full relative bg-black text-white text-left lg:p-15">
