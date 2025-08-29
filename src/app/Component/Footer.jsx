@@ -70,17 +70,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-5 md:px-20">
-          <span class="block text-sm text-white text-left sm:text-center dark:text-gray-400">
+          <span className="block text-sm text-white text-left sm:text-center dark:text-gray-400">
             © 2023{" "}
-            <a href="https://flowbite.com/" class="hover:underline">
+            <a href="https://flowbite.com/" className="hover:underline">
               Positivus
             </a>
             . All Rights Reserved.
           </span>
-          <span class="block text-sm text-white text-left sm:text-center dark:text-gray-400">
-            <a href="https://flowbite.com/" class="hover:underline">
+          <span className="block text-sm text-white text-left sm:text-center dark:text-gray-400">
+            <a href="https://flowbite.com/" className="hover:underline">
               Privacy Policy
             </a>
           </span>

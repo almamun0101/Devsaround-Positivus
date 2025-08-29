@@ -40,31 +40,14 @@ p{
   line-height: 24px;
   font-weight: 400;
 }
-/* Dot container */
-.slick-dots {
-  bottom: 10px; /* distance from slider bottom */
+/* inactive dot */
+.slick-dots li button .slick-dot-icon {
+  color: #9ca3af; /* Tailwind gray-400 */
 }
 
-/* Dot items */
-.slick-dots li button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #B9FF66; /* default color */
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-
-/* Active dot */
-.slick-dots li.slick-active button {
-  opacity: 1;
-  transform: scale(1.2);
-  background: #FF6B6B; /* active dot color */
-}
-
-/* Remove default button styles */
-.slick-dots li button:before {
-  content: "";
+/* active dot → icon turns text-pri */
+.slick-dots li.slick-active button .slick-dot-icon {
+  color: var(--pri-color, #00b894) !important;
 }
 
 
