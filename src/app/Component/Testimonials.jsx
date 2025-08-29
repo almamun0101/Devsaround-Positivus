@@ -99,6 +99,7 @@ const Testimonials = () => {
               <div className="flex flex-col p-6 rounded-xl items-start transition-all duration-500 ease-in-out">
                 <p className="multi-lines pb-10 relative italic border-2 border-pri p-10 rounded-4xl text-sm md:text-base line-clamp-3 md:line-clamp-none">
                   “{c.text}”
+                  <span></span>
                 </p>
                 <div className="mt-4 pl-12 text-left">
                   <p className="font-semibold pt-4 text-pri">{c.name}</p>
