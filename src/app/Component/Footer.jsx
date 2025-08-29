@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="container">
       <div className="bg-black text-white py-20 rounded-t-4xl">
-        <nav className="flex flex-col md:flex-row justify-between items-center py-2 px-5 gap-5">
+        <nav className="flex flex-col md:flex-row justify-between items-center py-2 px-20 gap-5">
           <div className="">
             <Image
               src="/logo/bottomlogo.png"
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </nav>
 
-        <div className=" mx-auto py-20 px-4 flex flex-col md:flex-row justify-between items-center">
+        <div className=" mx-auto py-20 md:px-20 flex flex-col md:flex-row justify-between items-center">
           {/* Left side: Contact Us */}
           <div className="flex flex-col text-center items-center md:items-start gap-4  md:justify-start  mb-4 md:mb-0">
             <h2 className="!text-lg font-semibold bg-pri text-black px-2 rounded-sm">
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           {/* Right side: Email input and Subscribe button */}
-          <div className="bg-[#292A32] p-20 rounded-xl px-2 min-w-full">
+          <div className="bg-[#292A32] p-20 rounded-xl px-2 md:px-20">
             <form className="flex flex-col md:flex-row  gap-2 justify-between w-full md:w-auto ">
               <input
                 type="email"
@@ -71,11 +71,20 @@ const Footer = () => {
         </div>
 
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-       <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-5">
-        <span class="block text-sm text-white text-left sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Positivus</a>. All Rights Reserved.</span>
-        <span class="block text-sm text-white text-left sm:text-center dark:text-gray-400"><a href="https://flowbite.com/" class="hover:underline">Privacy Policy</a></span>
-        </div> 
-  
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-5 md:px-20">
+          <span class="block text-sm text-white text-left sm:text-center dark:text-gray-400">
+            © 2023{" "}
+            <a href="https://flowbite.com/" class="hover:underline">
+              Positivus
+            </a>
+            . All Rights Reserved.
+          </span>
+          <span class="block text-sm text-white text-left sm:text-center dark:text-gray-400">
+            <a href="https://flowbite.com/" class="hover:underline">
+              Privacy Policy
+            </a>
+          </span>
+        </div>
       </div>
     </div>
   );
