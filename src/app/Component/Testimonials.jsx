@@ -30,45 +30,59 @@ const comments = [
 ];
 
 const Testimonials = () => {
-  const sliderRef = useRef(null);
+  const sliderRefDesktop = useRef(null);
+  const sliderRefMobile = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
     infinite: true,
-  centerMode: true,
-  centerPadding: "200px",
-  slidesToShow: 1,
-  speed: 500,
-  arrows: false,
-  dots: false,
-  beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        centerMode: true,
-        centerPadding: "100px",
-        slidesToShow: 1,
+    centerMode: true,
+    centerPadding: "20%",
+    slidesToShow: 1,
+    speed: 500,
+    arrows: false,
+    dots: false,
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerMode: true,
+          centerPadding: "20%",
+          slidesToShow: 1,
+        },
       },
-    },
-    {
-      breakpoint: 768, // tablet
-      settings: {
-        centerMode: false,  // disable centerMode
-        centerPadding: "0px",
-        slidesToShow: 1,    // show only 1 slide
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+          centerPadding: "0%",
+          slidesToShow: 1,
+        },
       },
-    },
-    {
-      breakpoint: 480, // mobile
-      settings: {
-        centerMode: false,  // disable centerMode
-        centerPadding: "0px",
-        slidesToShow: 1,    // show only 1 slide
+    ],
+  };
+
+  const settings2 = {
+    infinite: true,
+    centerMode: true,
+    centerPadding: "0%",
+    slidesToShow: 1,
+    speed: 500,
+    arrows: false,
+    dots: false,
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+          centerPadding: "0%",
+          slidesToShow: 1,
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
   return (
     <div className="container py-10">
@@ -77,16 +91,16 @@ const Testimonials = () => {
         content="Hear from Our Satisfied Clients: Read Our Testimonials to learn more about our Digital Marketing Services"
       />
 
-      <div className="relative p-10 bg-[#191A23] text-white rounded-2xl overflow-hidden">
-        <Slider ref={sliderRef} {...settings} className="lg:px-6">
+      {/* ===== Desktop Slider ===== */}
+      <div className="hidden py-5 md:block relative bg-[#191A23] text-white rounded-2xl overflow-hidden">
+        <Slider ref={sliderRefDesktop} {...settings} className="py-10">
           {comments.map((c) => (
             <div key={c.id} className="px-3">
-              <div className="flex flex-col lg:p-6 rounded-xl items-center transition-all duration-500 ease-in-out">
+              <div className="flex flex-col p-6 rounded-xl items-start transition-all duration-500 ease-in-out">
                 <p className="multi-lines pb-10 relative italic border-2 border-pri p-10 rounded-4xl text-sm md:text-base line-clamp-3 md:line-clamp-none">
                   “{c.text}”
-                  <span></span>
                 </p>
-                <div className="mt-4 text-center">
+                <div className="mt-4 pl-12 text-left">
                   <p className="font-semibold pt-4 text-pri">{c.name}</p>
                   <p className="text-xs text-gray-400">{c.position}</p>
                 </div>
@@ -95,27 +109,25 @@ const Testimonials = () => {
           ))}
         </Slider>
 
-        {/* Arrows + Dots row */}
-        <div className="flex items-center justify-center gap-10 lg:gap-50 mt-6">
-          {/* Prev Arrow */}
+        {/* Arrows + Dots */}
+        <div className="flex items-center justify-center gap-10 mt-6 pb-10">
           <button
-            onClick={() => sliderRef.current.slickPrev()}
-            className=" text-white p-3 rounded-full shadow-lg opacity-40  hover:opacity-100 hover:scale-105 transition"
+            onClick={() => sliderRefDesktop.current.slickPrev()}
+            className="text-white p-3 rounded-full shadow-lg opacity-40 hover:opacity-100 hover:scale-105 transition"
           >
             <FaArrowLeft size={20} />
           </button>
 
-          {/* Dots */}
-          <div className="flex  gap-2 lg:gap-5">
+          <div className="flex gap-2 lg:gap-5">
             {comments.map((_, idx) => (
               <button
                 key={idx}
-                onClick={() => sliderRef.current.slickGoTo(idx)}
+                onClick={() => sliderRefDesktop.current.slickGoTo(idx)}
                 className="w-6 h-6 flex items-center justify-center"
               >
                 <PiStarFourFill
-                size={20}
-                  className={`slick-dot-icon rotate-45 ${
+                  size={20}
+                  className={`rotate-45 ${
                     currentSlide === idx ? "text-[#B9FF66]" : "text-gray-400"
                   }`}
                 />
@@ -123,10 +135,62 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Next Arrow */}
           <button
-            onClick={() => sliderRef.current.slickNext()}
-            className=" text-white p-3 rounded-full shadow-lg opacity-40  hover:opacity-100 hover:scale-105 transition"
+            onClick={() => sliderRefDesktop.current.slickNext()}
+            className="text-white p-3 rounded-full shadow-lg opacity-40 hover:opacity-100 hover:scale-105 transition"
+          >
+            <FaArrowRight size={20} />
+          </button>
+        </div>
+      </div>
+
+      {/* ===== Mobile Slider ===== */}
+      <div className="md:hidden relative bg-[#191A23] text-white rounded-2xl overflow-hidden">
+        <Slider ref={sliderRefMobile} {...settings2} className="py-10">
+          {comments.map((c) => (
+            <div key={c.id} className="px-3">
+              <div className="flex flex-col p-6 rounded-xl items-start transition-all duration-500 ease-in-out">
+                <p className="multi-lines pb-10 relative italic border-2 border-pri p-10 rounded-4xl text-sm md:text-base line-clamp-3 md:line-clamp-none">
+                  “{c.text}”
+                </p>
+                <div className="mt-4 pl-12 text-left">
+                  <p className="font-semibold pt-4 text-pri">{c.name}</p>
+                  <p className="text-xs text-gray-400">{c.position}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+
+        {/* Arrows + Dots */}
+        <div className="flex items-center justify-center gap-10 mt-6 pb-10">
+          <button
+            onClick={() => sliderRefMobile.current.slickPrev()}
+            className="text-white p-3 rounded-full shadow-lg opacity-40 hover:opacity-100 hover:scale-105 transition"
+          >
+            <FaArrowLeft size={20} />
+          </button>
+
+          <div className="flex gap-2 lg:gap-5">
+            {comments.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => sliderRefMobile.current.slickGoTo(idx)}
+                className="w-6 h-6 flex items-center justify-center"
+              >
+                <PiStarFourFill
+                  size={20}
+                  className={`rotate-45 ${
+                    currentSlide === idx ? "text-[#B9FF66]" : "text-gray-400"
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => sliderRefMobile.current.slickNext()}
+            className="text-white p-3 rounded-full shadow-lg opacity-40 hover:opacity-100 hover:scale-105 transition"
           >
             <FaArrowRight size={20} />
           </button>

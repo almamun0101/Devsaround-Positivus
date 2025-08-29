@@ -10,19 +10,19 @@ import Contact from "../Component/Contact";
 import Footer from "../Component/Footer";
 
 
+
 const page = () => {
   return (
     <div className="px-2 ">
-      <Navbar />
+      {/* <Navbar />
       <Header/>
       <Services/>
       <Studies/>
       <Process/>
-      <Team/>
+      <Team/> */}
       <Testimonials/>
-      <Contact/>
-      <Footer/>
-
+      {/* <Contact/>
+      <Footer/> */}
     </div>
   );
 };
