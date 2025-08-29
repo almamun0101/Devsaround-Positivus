@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DevsAround Frontend Developer Test — Positivus
 
-## Getting Started
+A responsive, accessible, and SEO-friendly implementation of the provided Figma design, built for the DevsAround assessment.
 
-First, run the development server:
+- **Live Demo:** https://positivus-almamun0101.netlify.app/
+- **Repository:** https://github.com/almamun0101/Devsaround-Positivus
 
+---
+
+## ✨ Features (mapped to evaluation)
+- **Accurate UI/UX (20 pts):** Pixel-conscious layout, spacing, and typography aligned with the Figma design.
+- **Responsive (20 pts):** Mobile-first; grids and components adapt from small to large breakpoints.
+- **Clean Code (20 pts):** Componentized structure, clear naming, reusable UI pieces, and comments where helpful.
+- **SEO & Accessibility (10 pts):**
+  - Semantic HTML, proper headings hierarchy.
+  - Descriptive alt text and ARIA labels.
+  - Keyboard focus states and skip-to-content link.
+  - Meta tags (title/description), Open Graph, and canonical URL.
+- **Modern Transitions & Animation (10 pts):** Subtle, performant animations (Framer Motion) and smooth UI state transitions.
+- **Dark/Light Mode (10 pts):** Theme toggle + system preference support.
+- **Git & Docs (10 pts):** Meaningful commit messages, PR-friendly structure, and this README.
+- **Bonus — Dockerization (10 pts):** Dockerfile + run instructions included.
+
+---
+
+## 🛠️ Tech Stack
+- **Framework:** Next.js (App Router) / React
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Slider/Carousel (where applicable):** react-slick
+- **Icons:** lucide-react (or equivalent)
+- **Theming:** next-themes (class-based dark mode)
+- **Linting/Formatting:** ESLint & Prettier
+
+> Note: If you’re reviewing locally, no external secrets are required.
+
+---
+
+## 📦 Getting Started
+
+### 1) Clone & Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/almamun0101/Devsaround-Positivus.git
+cd Devsaround-Positivus
+npm install
