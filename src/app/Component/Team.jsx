@@ -133,7 +133,7 @@ const Team = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-black dark:bg-white text-white dark:text-black text-xl w-64 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all"
+          className="bg-black hover:bg-white dark:hover:bg-black hover:text-black dark:hover:text-white dark:bg-white text-white dark:text-black text-xl w-64 h-16 rounded-xl shadow-lg hover:shadow-2xl transition-all"
         >
           See All Team
         </motion.button>

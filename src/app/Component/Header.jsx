@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import CustomBtn from "./CustomBtn";
 
 const logos = [
   { title: "amazon", src: "/logo/Company logo (0).png" },
@@ -25,9 +26,7 @@ const Header = () => {
             online through a range of services including SEO, PPC, social
             media marketing, and content creation.
           </p>
-          <button className="bg-black dark:bg-white text-white dark:text-black w-66 h-16 rounded-xl transition-colors">
-            Book a consultation
-          </button>
+          <CustomBtn btn={"Book a consultation"}/>
         </div>
         <div className="w-full h-[400px] relative">
           <Image
