@@ -7,6 +7,7 @@ import Process from "../Component/Process";
 import Team from "../Component/Team";
 import Testimonials from "../Component/Testimonials";
 import Contact from "../Component/Contact";
+import Footer from "../Component/Footer";
 
 
 const page = () => {
@@ -20,6 +21,7 @@ const page = () => {
       <Team/>
       <Testimonials/>
       <Contact/>
+      <Footer/>
 
     </div>
   );

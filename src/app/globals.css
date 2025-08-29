@@ -40,6 +40,80 @@ p{
   line-height: 24px;
   font-weight: 400;
 }
+/* Dot container */
+.slick-dots {
+  bottom: 10px; /* distance from slider bottom */
+}
+
+/* Dot items */
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #B9FF66; /* default color */
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Active dot */
+.slick-dots li.slick-active button {
+  opacity: 1;
+  transform: scale(1.2);
+  background: #FF6B6B; /* active dot color */
+}
+
+/* Remove default button styles */
+.slick-dots li button:before {
+  content: "";
+}
+
+
+.multi-lines {
+  position: relative;
+  display: inline-block;
+}
+
+/* main line */
+.multi-lines::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 30px;
+  width: 38px;
+  height: 4px;
+  z-index: 1;
+  background-color: #191A23;
+}
+
+/* rotated line 1 */
+.multi-lines::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 30px;
+  width: 35px;
+  height: 2px;
+  z-index: 5;
+  background-color: #B9FF66;
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+
+/* rotated line 2 (real span) */
+.multi-lines span {
+  position: absolute;
+  bottom: -2px;
+  left: 70px;
+  width: 30px;
+  height: 2px;
+  z-index: 5;
+  background-color: #B9FF66;
+  transform: rotate(120deg);
+  transform-origin: left center;
+  display: block; /* ✅ important to make it visible */
+}
+
+
 /* 
 ---break--- */
 @theme inline {

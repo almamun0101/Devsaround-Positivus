@@ -1,52 +1,111 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import React from "react";
+import Slider from "react-slick";
 import Heading from "./Heading";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const comments = [
-  { id: "c1", text: "This service is amazing! It helped me grow my business fast." },
-  { id: "c2", text: "Excellent support and great features. Highly recommend!" },
-  { id: "c3", text: "I love the clean design and smooth experience." },
-  { id: "c4", text: "Super easy to use and very reliable." },
+  {
+    id: "c1",
+    name: "John Smith",
+    position: "Marketing Director at XYZ Corp",
+    text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    id: "c2",
+    name: "Sarah Johnson",
+    position: "CEO at ABC Ltd",
+    text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    id: "c3",
+    name: "Michael Brown",
+    position: "Founder of StartupHub",
+    text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    id: "c4",
+    name: "Emma Wilson",
+    position: "CTO at TechWave",
+    text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    id: "c5",
+    name: "David Lee",
+    position: "COO at BrightFuture",
+    text: "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
 ];
 
-
-
 const Testimonials = () => {
-   const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setIndex((p) => (p + 1) % comments.length), 4000);
-    return () => clearInterval(t);
-  }, [comments.length]);
+  const settings = {
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    centerPadding: "180px",
+    slidesToShow: 1, // default
+    speed: 500,
+    arrows: false,
+    customPaging: (i) => (
+      <div className="w-4 h-4 md:w-5 md:h-5 rounded-full transition-all duration-300">
+        <img src="/images/vectorIcon.png" alt="" />
+      </div>
+    ),
+    responsive: [
+      {
+        breakpoint: 1024, // tablets / small desktops
+        settings: {
+          centerPadding: "100px",
+          slidesToShow: 1, // still one slide
+        },
+      },
+      {
+        breakpoint: 768, // mobile
+        settings: {
+          centerPadding: "40px",
+          slidesToShow: 1, // ✅ only one slide
+          centerMode: false, // optional: disable centerMode on very small screens
+        },
+      },
+      {
+        breakpoint: 480, // extra small mobile
+        settings: {
+          centerPadding: "20px",
+          slidesToShow: 1,
+          centerMode: false, // disable centering
+        },
+      },
+    ],
+  };
 
   return (
     <div className="container py-10">
       <Heading
         title={"Testimonials"}
         content={
-          "Hear from OUr Satisfied Clients : Read Our Testimonials to earn more about our Digital Marketing Services"
+          "Hear from Our Satisfied Clients: Read Our Testimonials to learn more about our Digital Marketing Services"
         }
       />
 
-    <div className="flex flex-col items-center justify-center p-6 bg-black text-white py-50">
-      <div className="border border-pri p-5 w-1/2 text-center text-lg md:text-xl font-medium italic">
-        “{comments[index].text}”
+      <div className="relative p-20 bg-[#191A23] text-white rounded-2xl overflow-hidden">
+        <Slider {...settings} className="px-6">
+          {comments.map((c) => (
+            <div key={c.id} className="px-3">
+              <div className="flex flex-col p-6 rounded-xl items-center transition-all duration-500 ease-in-out">
+                <p className="multi-lines pb-10 relative italic border-2 border-pri p-10 rounded-4xl text-sm md:text-base line-clamp-3 md:line-clamp-none">
+                  “{c.text}”<span></span>
+                </p>
+                <div className="mt-4">
+                  <p className="font-semibold pt-10 text-pri">{c.name}</p>
+                  <p className="text-xs text-gray-400">{c.position}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
-
-      <div className="flex gap-2 mt-4">
-        {comments.map((c, i) => (
-          <button
-            key={c.id} // unique key — no more warning
-            onClick={() => setIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`w-3 h-3 rounded-full ${i === index ? "bg-blue-600" : "bg-gray-400"}`}
-          />
-        ))}
-      </div>
-    </div>
-
     </div>
   );
 };

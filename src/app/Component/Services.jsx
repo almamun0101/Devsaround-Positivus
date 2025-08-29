@@ -116,7 +116,7 @@ const Services = () => {
         </div>
         <div className="">
           <Image
-            src="/happen.png"
+            src="/Images/Frame1.png"
             alt="happen"
             width={400}
             height={400}
